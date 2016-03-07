@@ -2,7 +2,7 @@ EventInput = React.createClass({
 
   render() {
     return (
-      <form className="EventInput" onSubmit={this.handleSubmit} >
+      <form className="pure-form pure-form-stacked" onSubmit={this.handleSubmit} >
         <input
           type="text"
           ref="textInput"
@@ -10,11 +10,12 @@ EventInput = React.createClass({
         <input
           type="text"
           ref="timeInput"
-          placeholder="Duration" />
-        <input
+          pattern="\d*"
+          placeholder="Duration"
+          noValidate />
+        <button
           type="submit"
-          ref="submitButton"
-          value="submit" />
+          className="pure-button pure-button-primary">SUBMIT!!!!!</button>
       </form>
     )
   },
